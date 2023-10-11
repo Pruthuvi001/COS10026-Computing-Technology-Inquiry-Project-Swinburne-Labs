@@ -1,0 +1,48 @@
+Creating Tables
+
+CREATE TABLE cars ( car_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY make VARCHAR(25) NOT NULL , model VARCHAR(40) NOT NULL , price FLOAT NOT NULL , yom INT NOT NULL 
+) ; 
+
+Adding data
+
+INSERT INTO cars (car_id, make, model, price, yom) 
+VALUES (NULL, 'BMW', 'X3', '35000', '20101');
+
+INSERT INTO cars (make, model, price, yom) 
+VALUES ('Holden', 'Astra', '14000.00', '2009');
+INSERT INTO cars (make, model, price, yom) 
+VALUES ('BMW', 'X3', '35000.00', '2010');
+INSERT INTO cars (make, model, price, yom) 
+VALUES ('Ford', 'Falcon', '39000.00', '2013');
+INSERT INTO cars (make, model, price, yom) 
+VALUES ('Toyota', 'Corolla', '20000.00', '2012');
+INSERT INTO cars (make, model, price, yom) 
+VALUES ('Holden', 'Commodore', '13500.00', '2005');
+INSERT INTO cars (make, model, price, yom) 
+VALUES ('Holden', 'Astra', '8000.00', '2004');
+INSERT INTO cars (make, model, price, yom) 
+VALUES ('Holden', 'Commodore', '28000.00', '2009');
+INSERT INTO cars (make, model, price, yom) 
+VALUES ('Ford', 'Falcon', '14000.00', '2011');
+INSERT INTO cars (make, model, price, yom) 
+VALUES ('Ford', 'Falcon', '7000.00', '2003');
+INSERT INTO cars (make, model, price, yom) 
+VALUES ('Ford', 'Laser', '10000.00', '2010');
+
+SQL Queries
+
+SELECT make, model
+FROM cars
+WHERE price < 15000.00;
+
+SELECT AVG(price) AS average_price
+FROM cars
+WHERE make = 'Ford';
+
+SELECT *
+FROM cars
+WHERE yom >= 2010 AND price >= 15000.00;
+
+
+
+
